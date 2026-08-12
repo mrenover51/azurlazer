@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { GlobalCta } from "@/components/layout/global-cta";
+import { PageHero } from "@/components/ui/page-hero";
+import { SectionTitle } from "@/components/ui/section-title";
+import { company } from "@/lib/company";
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata = pageMetadata("Zone d’intervention", "Consultez la zone d’intervention d’AZUR LASER et soumettez votre chantier pour étude.", "/zone-intervention");
+export default function ZonePage() { return <><PageHero eyebrow="Mobilité" title="Zone d’intervention" subtitle="Une organisation adaptée aux contraintes de votre chantier." /><section className="content-section"><div className="shell zone-grid"><div className="map-placeholder"><span>Carte à configurer</span><div className="map-radar" /><strong>{company.intervention.departureCity}</strong><small>Point de départ à renseigner</small></div><div><SectionTitle eyebrow="Secteur" title="Une zone définie, des projets étudiés" /><p className="body-large">La ville de départ, le département et le rayon d’intervention seront publiés après validation des informations de l’entreprise.</p><dl className="zone-data"><div><dt>Département</dt><dd>{company.intervention.department}</dd></div><div><dt>Rayon courant</dt><dd>{company.intervention.radius}</dd></div><div><dt>Villes principales</dt><dd>[LISTE À RENSEIGNER]</dd></div></dl><p>Des déplacements plus importants peuvent être étudiés selon la nature du chantier, sa surface, sa durée et ses contraintes techniques.</p></div></div></section><section className="zone-cta"><div className="shell"><p>Votre chantier est-il dans notre secteur ?</p><h2>Parlez-nous de votre projet.</h2><Link className="primary-button" href="/contact">Vérifier mon secteur <span>→</span></Link></div></section><GlobalCta /></>; }

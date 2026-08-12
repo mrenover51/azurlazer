@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/layout/footer";
 import "./globals.css";
+import "./site.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AZUR LASER | Décapage laser et aérogommage",
-  description:
-    "AZUR LASER, spécialiste du décapage laser et de l’aérogommage.",
+  title: { default: "AZUR LASER | Décapage laser et aérogommage", template: "%s | AZUR LASER" },
+  description: "Décapage laser, aérogommage et préparation de surfaces avec une approche technique adaptée à chaque projet.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
+  return <html lang="fr" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}><body><Header /><main>{children}</main><Footer /></body></html>;
 }
