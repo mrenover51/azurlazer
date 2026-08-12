@@ -15,7 +15,7 @@ export function Footer() {
         <FooterColumn title="Informations" links={[["Mentions légales", "/mentions-legales"], ["Politique de confidentialité", "/politique-confidentialite"]]} />
         <div className="footer-column">
           <h2>Contact</h2>
-          <p>{company.phone}</p><p>{company.email}</p><p>{company.intervention.department}</p>
+          <p>{company.phone}</p><p>{company.email}</p><p>Fréjus - Var</p><p>Interventions dans un rayon d’environ 100 km</p>
         </div>
       </div>
       <div className="shell footer-bottom"><span>© {new Date().getFullYear()} AZUR LASER</span><span>Décapage laser &amp; aérogommage</span></div>

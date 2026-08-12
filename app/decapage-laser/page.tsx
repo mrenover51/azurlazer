@@ -7,7 +7,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Décapage laser", "Comprendre le décapage laser, ses avantages, ses applications et les supports compatibles.", "/decapage-laser");
+export const metadata = pageMetadata("Décapage laser à Fréjus et dans le Var", "Décapage laser à Fréjus et dans le Var : principe, avantages, applications et supports compatibles, avec intervention dans un rayon habituel d’environ 100 km.", "/decapage-laser");
 const applications = [
   { label: "Rouille et oxydation", src: "/images/laser/rust-metal-surface.webp" },
   { label: "Peintures et revêtements compatibles", src: "/images/laser/painted-rust-metal.webp" },

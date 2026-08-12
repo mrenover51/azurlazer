@@ -6,7 +6,7 @@ import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { SectionTitle } from "@/components/ui/section-title";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Décapage laser & aérogommage", "AZUR LASER accompagne les projets de décapage laser, d’aérogommage et de préparation de surfaces.", "/");
+export const metadata = pageMetadata("Décapage laser & aérogommage à Fréjus", "AZUR LASER accompagne les projets de décapage laser et d’aérogommage à Fréjus, dans le Var et dans un rayon habituel d’environ 100 km.", "/");
 
 export default function Home() {
   return <>
@@ -33,6 +33,7 @@ export default function Home() {
       <div><SectionTitle eyebrow="Notre méthode" title="Observer. Tester. Paramétrer." /><p className="body-large">Un résultat professionnel commence par la compréhension du support. Nature de la matière, adhérence et épaisseur de la couche, géométrie, accessibilité et finition attendue guident le choix du procédé.</p><Link className="text-link" href="/contact">Faire étudier mon projet →</Link></div>
       <ol className="method-list"><li><span>01</span><div><h3>Diagnostic</h3><p>Analyse du support, du contaminant et des contraintes du chantier.</p></div></li><li><span>02</span><div><h3>Essai</h3><p>Validation sur une zone représentative lorsque la nature du support l’exige.</p></div></li><li><span>03</span><div><h3>Intervention</h3><p>Mise en œuvre avec des paramètres adaptés et un contrôle régulier du résultat.</p></div></li></ol>
     </div></section>
+    <section className="home-area"><div className="shell"><div><p className="section-eyebrow"><span />Fréjus · Var</p><h2>À vos côtés dans un rayon d’environ 100 km</h2></div><p>AZUR LASER intervient depuis Fréjus pour vos projets de décapage laser et d’aérogommage dans le Var et sur une partie des Alpes-Maritimes.</p><Link className="text-link" href="/zone-intervention">Découvrir notre zone d’intervention →</Link></div></section>
     <GlobalCta />
   </>;
 }

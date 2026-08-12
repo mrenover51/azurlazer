@@ -12,6 +12,7 @@ export function GlobalCta() {
           <li>Devis gratuit</li>
           <li>Étude personnalisée</li>
           <li>Photos jointes à votre demande</li>
+          <li>Fréjus et environ 100 km alentour</li>
         </ul>
         <Link className="primary-button" href="/contact">Demander un devis <span aria-hidden="true">→</span></Link>
       </div>

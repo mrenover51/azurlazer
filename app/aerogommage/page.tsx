@@ -6,7 +6,7 @@ import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Aérogommage", "Aérogommage du bois, de la pierre et du métal : principe, choix de l’abrasif et applications.", "/aerogommage");
+export const metadata = pageMetadata("Aérogommage à Fréjus et dans le Var", "Aérogommage à Fréjus et dans le Var pour le bois, la pierre et le métal, avec intervention dans un rayon habituel d’environ 100 km.", "/aerogommage");
 const apps = [
   { label: "Bois", src: "/images/aerogommage/wood-workshop-sanding.webp" },
   { label: "Poutres", src: "/images/aerogommage/wood-beams-renovation.webp" },
