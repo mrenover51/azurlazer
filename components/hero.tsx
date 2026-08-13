@@ -5,18 +5,18 @@ const heroImagePath = "/images/home/hero.png";
 
 const benefits = [
   {
-    title: "MÉTAL",
-    description: "Rouille, peinture et pièces mécaniques",
+    title: "PRÉCISION",
+    description: "Un travail ciblé et maîtrisé",
     icon: <span className="precision-icon" aria-hidden="true" />,
   },
   {
-    title: "BOIS",
-    description: "Meubles, poutres, volets et portes",
+    title: "ÉCO-RESPONSABLE",
+    description: "Des procédés qui limitent les décapants chimiques",
     icon: <span className="eco-icon" aria-hidden="true" />,
   },
   {
-    title: "PIERRE & BRIQUE",
-    description: "Nettoyage et rénovation de surfaces",
+    title: "INTERVENTION SUR SITE",
+    description: "Dans vos locaux, sur chantier ou chez vous",
     icon: <span className="efficiency-icon" aria-hidden="true" />,
   },
 ] as const;
@@ -40,7 +40,7 @@ export function Hero() {
         <div className="hero-content">
           <p className="eyebrow"><span />Décapage laser &amp; aérogommage</p>
           <h1><span>AZUR</span> LASER</h1>
-          <p className="hero-subtitle">Redonnez vie à vos surfaces.</p>
+          <p className="hero-subtitle">Deux technologies. Toutes les solutions.</p>
 
           <div className="benefits" aria-label="Nos avantages">
             {benefits.map(({ title, description, icon }) => (
@@ -58,9 +58,9 @@ export function Hero() {
             <a className="primary-button" href="/contact">
               Demander un devis <span aria-hidden="true">→</span>
             </a>
-            <a className="phone-button" href={company.phoneHref ? `tel:${company.phoneHref}` : "/contact"} aria-label={company.phoneHref ? `Appeler le ${company.phone}` : "Accéder au formulaire de contact"}>
+            <a className="phone-button" href={company.phoneHref ? `tel:${company.phoneHref}` : "/professionnels"} aria-label={company.phoneHref ? `Appeler le ${company.phone}` : "Découvrir nos solutions professionnelles"}>
               <span className="phone-icon" aria-hidden="true" />
-              {company.phone}
+              {company.phoneHref ? company.phone : "Solutions professionnels"}
             </a>
           </div>
         </div>

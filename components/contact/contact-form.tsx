@@ -20,6 +20,7 @@ export function ContactForm() {
         <Field label="Entreprise" name="company" /><Field label="Téléphone *" name="phone" type="tel" required />
         <Field label="Email *" name="email" type="email" required /><Field label="Code postal *" name="postalCode" inputMode="numeric" pattern="[0-9]{5}" required />
         <Field label="Ville *" name="city" required />
+        <label>Type de demande *<select name="requestType" required defaultValue=""><option value="" disabled>Sélectionnez</option><option>Devis</option><option>Démonstration</option><option>Besoin professionnel récurrent</option><option>Conseil</option></select></label>
         <label>Type de prestation *<select name="service" required defaultValue=""><option value="" disabled>Sélectionnez</option><option>Je ne sais pas / conseillez-moi</option><option>Décapage laser</option><option>Aérogommage</option></select></label>
         <label>Type de support *<select name="support" required defaultValue=""><option value="" disabled>Sélectionnez</option>{["Métal", "Bois", "Pierre", "Brique", "Béton", "Autre"].map((value) => <option key={value}>{value}</option>)}</select></label>
         <Field label="Surface approximative" name="surface" />

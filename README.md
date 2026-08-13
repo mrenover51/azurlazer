@@ -28,3 +28,13 @@ Le site est ensuite disponible sur [http://localhost:3000](http://localhost:3000
 - Zone d’intervention
 - Contact / Devis
 
+## GOOGLE BUSINESS PROFILE À CONFIGURER
+
+- [ ] Vérifier le nom AZUR LASER
+- [ ] Vérifier la catégorie
+- [ ] Renseigner le téléphone réel
+- [ ] Renseigner le site web
+- [ ] Définir la zone desservie
+- [ ] Renseigner les horaires
+- [ ] Ajouter des photos authentiques
+- [ ] Rédiger et vérifier la description

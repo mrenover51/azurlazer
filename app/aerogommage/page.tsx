@@ -1,34 +1,33 @@
+import Link from "next/link";
 import { ApplicationGrid } from "@/components/services/application-grid";
-import { BeforeAfterSlider } from "@/components/before-after-slider";
-import { VisualStory } from "@/components/services/visual-story";
-import { GlobalCta } from "@/components/layout/global-cta";
+import { BenefitList } from "@/components/services/benefit-list";
+import { DemoSection, OnSiteSection, ProjectJourney } from "@/components/commercial-sections";
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionTitle } from "@/components/ui/section-title";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Aérogommage à Fréjus et dans le Var", "Aérogommage à Fréjus et dans le Var pour le bois, la pierre et le métal, avec intervention dans un rayon habituel d’environ 100 km.", "/aerogommage");
+export const metadata = pageMetadata("Aérogommage Fréjus, Var & PACA", "Aérogommage à Fréjus, dans le Var et en PACA pour le bois, le métal, la pierre et la rénovation, avec intervention sur site.", "/aerogommage");
 const apps = [
-  { label: "Bois", src: "/images/aerogommage/wood-workshop-sanding.webp" },
-  { label: "Poutres", src: "/images/aerogommage/wood-beams-renovation.webp" },
-  { label: "Meubles", src: "/images/aerogommage/furniture-restoration-workshop.webp" },
-  { label: "Volets", src: "/images/aerogommage/wooden-shutters-brick.webp" },
-  { label: "Portes", src: "/images/aerogommage/wooden-shutters-brick.webp" },
-  { label: "Escaliers", src: "/images/aerogommage/wood-surface-preparation.webp" },
-  { label: "Métal", src: "/images/laser/rusted-industrial-steel.webp" },
-  { label: "Pierre", src: "/images/aerogommage/stone-wall-surface.webp" },
-  { label: "Brique", src: "/images/aerogommage/wood-brick-surface.webp" },
-  { label: "Façades compatibles", src: "/images/realisations/weathered-stone-paint.webp" },
-  { label: "Mobilier ancien", src: "/images/aerogommage/furniture-restoration-workshop.webp" },
-  { label: "Éléments décoratifs", src: "/images/aerogommage/wood-surface-preparation.webp" },
-];
+  { label: "Maisons et bâtiments", src: "/images/realisations/weathered-stone-paint.webp" }, { label: "Menuiseries et volets", src: "/images/aerogommage/wooden-shutters-brick.webp" },
+  { label: "Meubles et mobilier", src: "/images/aerogommage/furniture-restoration-workshop.webp" }, { label: "Escaliers et poutres", src: "/images/aerogommage/wood-beams-renovation.webp" },
+  { label: "Portails et structures métalliques", src: "/images/laser/rusted-industrial-steel.webp" }, { label: "Carrosserie et pièces mécaniques", src: "/images/laser/industrial-mechanical-gears.webp" },
+  { label: "Pierre et matériaux de construction", src: "/images/aerogommage/stone-wall-surface.webp" }, { label: "Travaux de restauration", src: "/images/aerogommage/wood-surface-preparation.webp" },
+] as const;
+const benefits = [
+  { title: "Une solution éco-responsable", text: "L’aérogommage peut utiliser des abrasifs d’origine minérale ou végétale et permet, selon les applications, de limiter ou d’éviter l’utilisation de décapants chimiques." },
+  { title: "Précis et maîtrisé", text: "La pression de travail et l’abrasif sont adaptés au matériau et au résultat recherché." },
+  { title: "Respectueux des supports", text: "Le travail à basse pression permet d’intervenir avec finesse sur de nombreux supports." },
+  { title: "Sans décapant chimique", text: "De nombreuses opérations peuvent être réalisées sans produits chimiques décapants." },
+  { title: "Polyvalent", text: "Bois, métal, pierre, mobilier, volets, portails ou pièces mécaniques." },
+] as const;
+const removable = ["Peintures", "Vernis", "Rouille", "Oxydation", "Salissures", "Résidus", "Revêtements anciens", "Certaines traces et dépôts"];
 
 export default function AeroPage() { return <>
-  <PageHero eyebrow="Décapage polyvalent" title="Aérogommage" subtitle="Retirer peinture, vernis et salissures sur de nombreux supports" image="/images/aerogommage/wood-workshop-sanding.webp"><a className="primary-button" href="/contact">Envoyer des photos <span>→</span></a></PageHero>
-  <section className="content-section"><div className="shell split-content"><SectionTitle eyebrow="En quelques mots" title="Qu’est-ce que l’aérogommage ?" /><div className="prose"><p>L’aérogommage permet de décaper une surface grâce à la projection contrôlée d’un produit très fin.</p><p>C’est une solution particulièrement intéressante pour retirer peinture, vernis ou salissures sur de nombreux supports.</p></div></div></section>
-  <section className="visual-story-section"><VisualStory items={[{ title: "Retrouver le bois", text: "Sur un meuble, une poutre ou un volet, nous adaptons le travail au bois et à la finition que vous souhaitez ensuite appliquer.", image: "/images/aerogommage/furniture-restoration-workshop.webp", label: "Restauration d’un meuble en bois" }, { title: "Nettoyer la pierre et la brique", text: "Nous ajustons la méthode à la surface. Un essai peut être réalisé pour vérifier le rendu avant d’aller plus loin.", image: "/images/aerogommage/wood-brick-surface.webp", label: "Bois ancien et mur en brique" }]} /></section>
-  <section className="content-section alt-section"><div className="shell"><SectionTitle eyebrow="Idéal pour…" title="De nombreux projets de rénovation" intro="Meubles, poutres, volets, portes, escaliers, pierre, brique, métal ou éléments anciens : nous vérifions la méthode adaptée à votre support." /><ApplicationGrid items={apps} /></div></section>
-  <section className="content-section"><div className="shell"><SectionTitle eyebrow="Notre savoir-faire" title="Un réglage adapté à votre surface" intro="Nous adaptons la pression et le produit utilisé à la surface afin d’obtenir le résultat recherché." /><div className="parameter-grid">{[["Le support", "Bois, pierre, brique ou métal"], ["La couche à retirer", "Peinture, vernis ou salissures"], ["La pression", "Ajustée pour chaque travail"], ["La zone à traiter", "Petite pièce ou surface étendue"], ["Le résultat souhaité", "Surface remise à nu ou prête à finir"]].map(([a,b]) => <article key={a}><span>+</span><h3>{a}</h3><p>{b}</p></article>)}</div></div></section>
-  <section className="content-section compare-methods"><div className="shell"><SectionTitle eyebrow="Nous vous conseillons" title="Laser ou aérogommage ?" intro="Pas besoin de connaître la différence avant de nous contacter. Montrez-nous simplement ce que vous souhaitez décaper : nous vous conseillerons la méthode la plus adaptée." /><div className="method-comparison"><article><span>01</span><h3>Laser</h3><p>Particulièrement adapté à de nombreux travaux précis sur métal : rouille, pièces mécaniques, préparation de surface et certains revêtements.</p></article><article><span>02</span><h3>Aérogommage</h3><p>Très polyvalent pour le bois, les meubles, les poutres, les volets, la pierre, la brique et de nombreux travaux de rénovation.</p></article></div><p className="technical-note"><strong>Un doute ?</strong> Envoyez-nous une photo.</p></div></section>
-  <section className="content-section comparison-section"><div className="shell"><SectionTitle eyebrow="Avant / Après" title="Le résultat en images" /><div className="comparison-grid"><BeforeAfterSlider title="Meuble en bois" beforeLabel="Ancien vernis" afterLabel="Bois remis à nu" beforeSrc="/images/aerogommage/furniture-restoration-workshop.webp" afterSrc="/images/aerogommage/wood-surface-preparation.webp" /><BeforeAfterSlider title="Poutre" beforeLabel="Bois ancien" afterLabel="Bois remis à nu" beforeSrc="/images/aerogommage/wood-brick-surface.webp" afterSrc="/images/aerogommage/wood-beams-renovation.webp" /><BeforeAfterSlider title="Pierre" beforeLabel="Pierre encrassée" afterLabel="Pierre nettoyée" beforeSrc="/images/realisations/weathered-stone-paint.webp" afterSrc="/images/aerogommage/stone-wall-surface.webp" /></div></div></section>
-  <GlobalCta />
+  <PageHero eyebrow="Aérogommage" title="Aérogommage" subtitle="Un décapage efficace, précis et respectueux des surfaces" image="/images/aerogommage/wood-workshop-sanding.webp"><Link className="primary-button" href="/contact">Demander un devis →</Link></PageHero>
+  <section className="content-section"><div className="shell split-content"><SectionTitle eyebrow="La technique" title="Un décapage adapté à chaque support" /><div className="prose"><p>L’aérogommage est une technique de décapage qui utilise un abrasif projeté à basse pression pour retirer peintures, vernis, rouille, salissures et différents revêtements.</p><p>La pression et le choix de l’abrasif sont adaptés à chaque support afin d’obtenir un décapage efficace tout en maîtrisant l’action sur la surface.</p></div></div></section>
+  <section className="content-section alt-section"><div className="shell"><SectionTitle eyebrow="Pour qui ?" title="De nombreux projets de rénovation" /><ApplicationGrid items={apps} /></div></section>
+  <section className="content-section"><div className="shell"><SectionTitle eyebrow="Pourquoi choisir l’aérogommage ?" title="Une solution précise et polyvalente" /><BenefitList items={benefits} /></div></section>
+  <section className="content-section process-section"><div className="shell split-content"><SectionTitle eyebrow="Comment fonctionne l’aérogommage ?" title="Air comprimé, abrasif et basse pression" /><div className="prose"><p>L’abrasif est mélangé à de l’air comprimé puis projeté à basse pression sur la surface.</p><p>L’impact de l’abrasif permet de décoller progressivement la couche à retirer.</p><p>Nous adaptons l’abrasif, la pression et la distance de travail en fonction du support et du résultat souhaité.</p></div></div></section>
+  <section className="content-section removable-section"><div className="shell"><SectionTitle eyebrow="Que peut-on retirer ?" title="Les couches et dépôts courants" /><div className="removable-grid">{removable.map((item, i) => <article key={item}><span>0{i + 1}</span><h3>{item}</h3></article>)}</div></div></section>
+  <OnSiteSection /><DemoSection /><ProjectJourney />
 </>; }
