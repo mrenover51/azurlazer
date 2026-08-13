@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: { default: "AZUR LASER | Décapage laser et aérogommage", template: "%s | AZUR LASER" },
-  description: "Décapage laser, aérogommage et préparation de surfaces avec une approche technique adaptée à chaque projet.",
+  description: "Décapage laser et aérogommage à Fréjus et dans le Var pour retirer rouille, peinture, vernis et salissures sur métal, bois, pierre et brique.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

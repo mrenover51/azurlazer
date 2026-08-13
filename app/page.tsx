@@ -12,26 +12,26 @@ export default function Home() {
   return <>
     <Hero />
     <section className="content-section services-section">
-      <div className="shell"><SectionTitle eyebrow="Nos prestations" title="La bonne technique pour chaque surface" intro="Nous analysons le support, la couche à retirer et le résultat attendu avant de proposer un procédé et des paramètres d’intervention." />
+      <div className="shell"><SectionTitle eyebrow="Votre besoin" title="Vous avez une surface à décaper ?" intro="Métal rouillé, ancienne peinture, meuble verni, poutres, volets, pierre, brique ou pièce mécanique : montrez-nous votre projet. AZUR LASER vous conseille la technique la plus adaptée." />
         <div className="service-cards">
-          <ServiceCard href="/decapage-laser" title="Décapage laser" index="01" image="/images/home/laser-industrial-hero.webp">Une action précise et sans abrasif projeté pour retirer certains contaminants, oxydations, peintures ou revêtements compatibles, tout en maîtrisant l’interaction avec le support.</ServiceCard>
-          <ServiceCard href="/aerogommage" title="Aérogommage" index="02" image="/images/aerogommage/wood-workshop-sanding.webp">Un procédé polyvalent à basse pression, utilisant un abrasif sélectionné pour le bois, la pierre, le métal et d’autres supports compatibles.</ServiceCard>
+          <ServiceCard href="/decapage-laser" title="Décapage laser" index="01" image="/images/home/laser-industrial-hero.webp">Une solution précise pour retirer la rouille, certaines peintures et différents dépôts. Elle convient particulièrement à de nombreux travaux sur métal.</ServiceCard>
+          <ServiceCard href="/aerogommage" title="Aérogommage" index="02" image="/images/aerogommage/wood-workshop-sanding.webp">Une solution polyvalente pour retirer peinture, vernis ou salissures sur le bois, la pierre, la brique, le métal et d’autres supports.</ServiceCard>
         </div>
       </div>
     </section>
     <section className="content-section comparison-section">
-      <div className="shell"><SectionTitle eyebrow="Avant / Après" title="La matière retrouve sa lecture" intro="Ces comparateurs illustrent les résultats recherchés. Ils seront remplacés par les photographies documentées des chantiers AZUR LASER." />
+      <div className="shell"><SectionTitle eyebrow="Avant / Après" title="Voyez le résultat recherché" intro="Faites glisser les images pour découvrir des exemples de surfaces avant et après décapage." />
         <div className="comparison-grid">
-          <BeforeAfterSlider title="Pièce métallique oxydée" beforeLabel="Métal oxydé" afterLabel="Métal préparé" beforeSrc="/images/laser/rust-metal-surface.webp" afterSrc="/images/laser/laser-metal-sparks.webp" />
-          <BeforeAfterSlider title="Pièce mécanique" beforeLabel="Mécanisme ancien" afterLabel="Travail de précision" beforeSrc="/images/laser/industrial-mechanical-gears.webp" afterSrc="/images/home/laser-industrial-hero.webp" />
-          <BeforeAfterSlider title="Surface contaminée" beforeLabel="Peinture et oxydation" afterLabel="Préparation métallique" beforeSrc="/images/laser/painted-rust-metal.webp" afterSrc="/images/laser/laser-metal-sparks.webp" />
+          <BeforeAfterSlider title="Surface rouillée" beforeLabel="Surface rouillée" afterLabel="Métal nettoyé" beforeSrc="/images/laser/rust-metal-surface.webp" afterSrc="/images/laser/laser-metal-sparks.webp" />
+          <BeforeAfterSlider title="Pièce mécanique" beforeLabel="Pièce à nettoyer" afterLabel="Métal nettoyé" beforeSrc="/images/laser/industrial-mechanical-gears.webp" afterSrc="/images/home/laser-industrial-hero.webp" />
+          <BeforeAfterSlider title="Ancienne peinture" beforeLabel="Peinture ancienne" afterLabel="Métal préparé" beforeSrc="/images/laser/painted-rust-metal.webp" afterSrc="/images/laser/laser-metal-sparks.webp" />
         </div>
         <div className="section-link"><Link href="/realisations">Découvrir toutes les réalisations <span>→</span></Link></div>
       </div>
     </section>
     <section className="content-section expertise-section"><div className="shell expertise-grid">
-      <div><SectionTitle eyebrow="Notre méthode" title="Observer. Tester. Paramétrer." /><p className="body-large">Un résultat professionnel commence par la compréhension du support. Nature de la matière, adhérence et épaisseur de la couche, géométrie, accessibilité et finition attendue guident le choix du procédé.</p><Link className="text-link" href="/contact">Faire étudier mon projet →</Link></div>
-      <ol className="method-list"><li><span>01</span><div><h3>Diagnostic</h3><p>Analyse du support, du contaminant et des contraintes du chantier.</p></div></li><li><span>02</span><div><h3>Essai</h3><p>Validation sur une zone représentative lorsque la nature du support l’exige.</p></div></li><li><span>03</span><div><h3>Intervention</h3><p>Mise en œuvre avec des paramètres adaptés et un contrôle régulier du résultat.</p></div></li></ol>
+      <div><SectionTitle eyebrow="Notre méthode" title="Comprendre. Tester. Décaper." /><p className="body-large">Nous regardons votre surface, ce qu’il faut retirer et le résultat souhaité. Nous pouvons ensuite vous proposer le laser, l’aérogommage ou un essai préalable.</p><Link className="text-link" href="/contact">Parler de mon projet →</Link></div>
+      <ol className="method-list"><li><span>01</span><div><h3>Votre besoin</h3><p>Vous nous décrivez le support, son état et le résultat que vous souhaitez.</p></div></li><li><span>02</span><div><h3>Notre conseil</h3><p>Nous choisissons la méthode adaptée. Un essai peut être proposé en cas de doute.</p></div></li><li><span>03</span><div><h3>Le décapage</h3><p>Nous adaptons le travail à la surface et contrôlons le résultat au fur et à mesure.</p></div></li></ol>
     </div></section>
     <section className="home-area"><div className="shell"><div><p className="section-eyebrow"><span />Fréjus · Var</p><h2>À vos côtés dans un rayon d’environ 100 km</h2></div><p>AZUR LASER intervient depuis Fréjus pour vos projets de décapage laser et d’aérogommage dans le Var et sur une partie des Alpes-Maritimes.</p><Link className="text-link" href="/zone-intervention">Découvrir notre zone d’intervention →</Link></div></section>
     <GlobalCta />

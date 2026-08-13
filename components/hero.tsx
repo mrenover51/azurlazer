@@ -5,18 +5,18 @@ const heroImagePath = "/images/home/hero.png";
 
 const benefits = [
   {
-    title: "PRÉCISION",
-    description: "Décapage ciblé en profondeur",
+    title: "MÉTAL",
+    description: "Rouille, peinture et pièces mécaniques",
     icon: <span className="precision-icon" aria-hidden="true" />,
   },
   {
-    title: "ÉCOLOGIQUE",
-    description: "Sans produits chimiques ni abrasifs nocifs",
+    title: "BOIS",
+    description: "Meubles, poutres, volets et portes",
     icon: <span className="eco-icon" aria-hidden="true" />,
   },
   {
-    title: "EFFICACITÉ",
-    description: "Résultat optimal, rapidement",
+    title: "PIERRE & BRIQUE",
+    description: "Nettoyage et rénovation de surfaces",
     icon: <span className="efficiency-icon" aria-hidden="true" />,
   },
 ] as const;
@@ -40,7 +40,7 @@ export function Hero() {
         <div className="hero-content">
           <p className="eyebrow"><span />Décapage laser &amp; aérogommage</p>
           <h1><span>AZUR</span> LASER</h1>
-          <p className="hero-subtitle">La technologie au service de vos surfaces</p>
+          <p className="hero-subtitle">Redonnez vie à vos surfaces.</p>
 
           <div className="benefits" aria-label="Nos avantages">
             {benefits.map(({ title, description, icon }) => (

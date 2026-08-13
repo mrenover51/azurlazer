@@ -20,8 +20,8 @@ export function RealizationsGallery() {
             <BeforeAfterSlider beforeLabel={item.beforeLabel} afterLabel={item.afterLabel} beforeSrc={item.beforeSrc} afterSrc={item.afterSrc} compact />
             <div className="realization-copy">
               <span>{item.category === "laser" ? "Décapage laser" : "Aérogommage"}</span>
-              <h2>{item.title}</h2><p>{item.description}</p>
-              <dl><div><dt>Support</dt><dd>{item.support}</dd></div><div><dt>Objectif</dt><dd>{item.objective}</dd></div></dl>
+              <h2>{item.title}</h2>
+              <dl><div><dt>Le besoin</dt><dd>{item.need}</dd></div><div><dt>Le support</dt><dd>{item.support}</dd></div><div><dt>La solution</dt><dd>{item.solution}</dd></div><div><dt>Le résultat</dt><dd>{item.result}</dd></div></dl>
             </div>
           </article>
         ))}

@@ -20,15 +20,15 @@ export function ContactForm() {
         <Field label="Entreprise" name="company" /><Field label="Téléphone *" name="phone" type="tel" required />
         <Field label="Email *" name="email" type="email" required /><Field label="Code postal *" name="postalCode" inputMode="numeric" pattern="[0-9]{5}" required />
         <Field label="Ville *" name="city" required />
-        <label>Type de prestation *<select name="service" required defaultValue=""><option value="" disabled>Sélectionnez</option><option>Décapage laser</option><option>Aérogommage</option><option>Je ne sais pas / besoin de conseil</option></select></label>
+        <label>Type de prestation *<select name="service" required defaultValue=""><option value="" disabled>Sélectionnez</option><option>Je ne sais pas / conseillez-moi</option><option>Décapage laser</option><option>Aérogommage</option></select></label>
         <label>Type de support *<select name="support" required defaultValue=""><option value="" disabled>Sélectionnez</option>{["Métal", "Bois", "Pierre", "Brique", "Béton", "Autre"].map((value) => <option key={value}>{value}</option>)}</select></label>
         <Field label="Surface approximative" name="surface" />
-        <label className="form-full">Description du projet *<textarea name="description" rows={6} required minLength={20} placeholder="Nature du support, état actuel, dimensions, résultat recherché…" /></label>
+        <label className="form-full">Description du projet *<textarea name="description" rows={6} required minLength={20} placeholder="Que souhaitez-vous décaper ? Que faut-il retirer ? Quelles sont les dimensions ?" /></label>
         <label className="form-full file-field">Photos du projet<input name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple /><small>JPG, PNG ou WebP. L’envoi sera activé avec le service de messagerie.</small></label>
       </div>
       <label className="consent"><input type="checkbox" name="consent" required /><span>J’accepte que les informations transmises soient utilisées pour répondre à ma demande. <Link href="/politique-confidentialite">Politique de confidentialité</Link>.</span></label>
       {status === "unconfigured" && <p className="form-notice" role="status">Le formulaire est validé, mais l’envoi n’est pas encore configuré. Renseignez le service d’email avant la mise en ligne.</p>}
-      <button className="primary-button" type="submit" disabled={status === "checking"}>{status === "checking" ? "Vérification…" : "Envoyer ma demande →"}</button>
+      <button className="primary-button" type="submit" disabled={status === "checking"}>{status === "checking" ? "Vérification…" : "Parler de mon projet →"}</button>
     </form>
   );
 }

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="shell footer-grid">
         <div className="footer-brand">
           <Brand />
-          <p>Décapage laser, aérogommage et préparation de surfaces avec une approche précise, raisonnée et adaptée à chaque support.</p>
+          <p>Décapage laser et aérogommage pour retirer rouille, peinture, vernis et salissures. Une solution adaptée à chaque support.</p>
         </div>
         <FooterColumn title="Nos services" links={[["Décapage laser", "/decapage-laser"], ["Aérogommage", "/aerogommage"], ["Réalisations", "/realisations"]]} />
         <FooterColumn title="Navigation" links={[["Accueil", "/"], ["Zone d’intervention", "/zone-intervention"], ["Contact / Devis", "/contact"]]} />
