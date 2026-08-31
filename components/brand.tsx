@@ -9,7 +9,7 @@ export function Brand() {
         alt="Azur Laser — Décapage laser & aérogommage"
         width={1536}
         height={1024}
-        sizes="(max-width: 767px) 200px, (max-width: 1180px) 240px, (max-width: 1260px) 260px, 300px"
+        sizes="(max-width: 767px) 114px, (max-width: 1180px) 132px, (max-width: 1260px) 144px, 150px"
         priority
       />
     </span>
