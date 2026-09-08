@@ -18,7 +18,13 @@ export function Footer() {
           <p>{company.phone}</p><p>{company.email}</p><p>Fréjus - Var</p><p>Rayon principal d’environ 100 km · projets étudiés en région PACA</p>
         </div>
       </div>
-      <div className="shell footer-bottom"><span>© {new Date().getFullYear()} AZUR LASER</span><span>Décapage laser &amp; aérogommage</span></div>
+      <div className="shell footer-bottom">
+        <span className="footer-copyright">
+          © {new Date().getFullYear()} AZUR LASER <span aria-hidden="true">·</span> Site créé par{" "}
+          <a href="https://mrdstudio.fr" target="_blank" rel="noopener noreferrer">MRD Studio</a>
+        </span>
+        <span>Décapage laser &amp; aérogommage</span>
+      </div>
     </footer>
   );
 }
