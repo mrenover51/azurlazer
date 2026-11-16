@@ -12,12 +12,13 @@ export const realizations = [
   {
     "id": "cylindre-moteur",
     "title": "Cylindre moteur",
-    "aspectRatio": "724 / 1086",
+    "aspectRatio": "1448 / 1086",
     "description": "Comparez l’aspect du cylindre moteur et de ses surfaces avant et après l’intervention.",
     "beforeLabel": "Cylindre moteur avant nettoyage",
     "afterLabel": "Cylindre moteur après nettoyage",
-    "beforeSrc": "/images/laser/azurlaser-cylindre-avant-fond-original.jpg",
-    "afterSrc": "/images/laser/azurlaser-cylindre-apres-fond-original.jpg"
+    // The supplied filenames are inverted: "apres" contains the uncleaned cylinder.
+    "beforeSrc": "/images/laser/azurlaser-cylindre-apres-fond-original.webp",
+    "afterSrc": "/images/laser/azurlaser-cylindre-avant-fond-original.webp"
   },
   {
     "id": "disque-metallique",
