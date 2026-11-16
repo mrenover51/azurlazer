@@ -1,0 +1,202 @@
+[
+  {
+    "nom": "Fréjus",
+    "code": "83061",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.7848,
+        43.4553
+      ]
+    },
+    "codesPostaux": [
+      "83370",
+      "83600"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Saint-Raphaël",
+    "code": "83118",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.8483,
+        43.4582
+      ]
+    },
+    "codesPostaux": [
+      "83530",
+      "83700"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Puget-sur-Argens",
+    "code": "83099",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.6861,
+        43.4712
+      ]
+    },
+    "codesPostaux": [
+      "83480"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Roquebrune-sur-Argens",
+    "code": "83107",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.6525,
+        43.4282
+      ]
+    },
+    "codesPostaux": [
+      "83380",
+      "83520"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Sainte-Maxime",
+    "code": "83115",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.6139,
+        43.3584
+      ]
+    },
+    "codesPostaux": [
+      "83120"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Saint-Tropez",
+    "code": "83119",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.6638,
+        43.2619
+      ]
+    },
+    "codesPostaux": [
+      "83990"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Cogolin",
+    "code": "83042",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.5319,
+        43.2406
+      ]
+    },
+    "codesPostaux": [
+      "83310"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Grimaud",
+    "code": "83068",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.5097,
+        43.2822
+      ]
+    },
+    "codesPostaux": [
+      "83310"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Draguignan",
+    "code": "83050",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.4651,
+        43.5346
+      ]
+    },
+    "codesPostaux": [
+      "83300"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Fayence",
+    "code": "83055",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.6762,
+        43.6118
+      ]
+    },
+    "codesPostaux": [
+      "83440"
+    ],
+    "codeDepartement": "83"
+  },
+  {
+    "nom": "Mandelieu-la-Napoule",
+    "code": "06079",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        6.918,
+        43.5334
+      ]
+    },
+    "codesPostaux": [
+      "06210"
+    ],
+    "codeDepartement": "06"
+  },
+  {
+    "nom": "Cannes",
+    "code": "06029",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        7.0152,
+        43.5454
+      ]
+    },
+    "codesPostaux": [
+      "06150",
+      "06400"
+    ],
+    "codeDepartement": "06"
+  },
+  {
+    "nom": "Antibes",
+    "code": "06004",
+    "centre": {
+      "type": "Point",
+      "coordinates": [
+        7.1048,
+        43.5823
+      ]
+    },
+    "codesPostaux": [
+      "06160",
+      "06600"
+    ],
+    "codeDepartement": "06"
+  }
+]
