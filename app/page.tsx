@@ -1,8 +1,11 @@
 import Link from "next/link";
+import Image, { type StaticImageData } from "next/image";
 import { Hero } from "@/components/hero";
 import { RealizationsGallery } from "@/components/realizations/realizations-gallery";
 import { DemoSection, OnSiteSection, ProjectJourney, TechnologyChooser } from "@/components/commercial-sections";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+import laserServiceImage from "@/public/images/home/Nettoyage laser d’une plaque rouillée.webp";
+import aerogommageServiceImage from "@/public/images/home/Aérogommage d’un volet en bois.webp";
+import styles from "./home.module.css";
 import { SectionTitle } from "@/components/ui/section-title";
 import { BenefitList } from "@/components/services/benefit-list";
 import { pageMetadata } from "@/lib/metadata";
@@ -19,7 +22,7 @@ const reasons = [
 
 export default function Home() { return <>
   <Hero />
-  <section className="content-section services-section"><div className="shell"><SectionTitle eyebrow="Nos prestations" title="À chaque surface, sa solution." intro="Laser ou aérogommage : nous choisissons la technologie la plus adaptée à votre support pour un décapage précis, efficace et maîtrisé." /><div className="service-cards"><ServiceCard href="/decapage-laser" title="Décapage laser" index="01" image="/images/home/laser-industrial-hero.webp">Une technologie précise pour retirer rouille, oxydation, peinture, vernis, résidus ou certains revêtements.</ServiceCard><ServiceCard href="/aerogommage" title="Aérogommage" index="02" image="/images/aerogommage/wood-workshop-sanding.webp">Une solution polyvalente à basse pression pour le bois, le métal, la pierre, le mobilier et de nombreux projets de rénovation.</ServiceCard></div></div></section>
+  <section className="content-section services-section"><div className="shell"><SectionTitle eyebrow="Nos prestations" title="À chaque surface, sa solution." intro="Laser ou aérogommage : nous choisissons la technologie la plus adaptée à votre support pour un décapage précis, efficace et maîtrisé." /><div className="service-cards"><ServiceCard href="/decapage-laser" title="Décapage laser" index="01" image={laserServiceImage} imageAlt="Nettoyage laser d’une plaque métallique rouillée">Une technologie précise pour retirer rouille, oxydation, peinture, vernis, résidus ou certains revêtements.</ServiceCard><ServiceCard href="/aerogommage" title="Aérogommage" index="02" image={aerogommageServiceImage} imageAlt="Aérogommage d’un volet en bois pour retirer son ancienne peinture">Une solution polyvalente à basse pression pour le bois, le métal, la pierre, le mobilier et de nombreux projets de rénovation.</ServiceCard></div></div></section>
   <OnSiteSection />
   <DemoSection />
   <TechnologyChooser />
@@ -30,4 +33,14 @@ export default function Home() { return <>
   <section className="home-area"><div className="shell"><div><p className="section-eyebrow"><span />Fréjus · Var · PACA</p><h2>Intervention sur site région PACA</h2></div><p>Basés à Fréjus, nous intervenons principalement dans un rayon d’environ 100 km et étudions certains projets plus largement en région PACA selon leur nature.</p><Link className="text-link" href="/zone-intervention">Voir la zone d’intervention →</Link></div></section>
 </>; }
 
-function ServiceCard({ href, title, index, image, children }: { href: string; title: string; index: string; image: string; children: React.ReactNode }) { return <article className="service-card"><ImagePlaceholder label={title} src={image} sizes="(max-width: 767px) 100vw, 50vw" /><div className="service-card-copy"><span className="service-index">{index}</span><h3>{title}</h3><p>{children}</p><Link href={href}>Découvrir <span>→</span></Link></div></article>; }
+function ServiceCard({ href, title, index, image, imageAlt, children }: { href: string; title: string; index: string; image: StaticImageData; imageAlt: string; children: React.ReactNode }) {
+  return <article className="service-card">
+    <div className={`visual-image ${styles.serviceVisual}`}>
+      <Image src={image} alt={imageAlt} fill placeholder="blur" sizes="(max-width: 767px) 100vw, (max-width: 1434px) 50vw, 680px" />
+      <span className="visual-overlay" aria-hidden="true" />
+      <span className="visual-label">Photo d’illustration</span>
+      <strong>{title}</strong>
+    </div>
+    <div className="service-card-copy"><span className="service-index">{index}</span><h3>{title}</h3><p>{children}</p><Link href={href}>Découvrir <span>→</span></Link></div>
+  </article>;
+}

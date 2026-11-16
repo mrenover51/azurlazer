@@ -1,0 +1,25 @@
+.serviceVisual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 16 / 9;
+  padding: 26px;
+  overflow: hidden;
+  background: #08131e;
+}
+
+.serviceVisual img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.serviceVisual strong {
+  position: relative;
+  z-index: 2;
+  margin-top: 7px;
+  color: #a4b3c1;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
