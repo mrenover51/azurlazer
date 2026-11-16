@@ -1,0 +1,15 @@
+.grid { align-items: stretch; }
+.grid article { min-width: 0; overflow: hidden; border-color: #168de03d; }
+.frame { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #08131e; border-bottom: 1px solid #168de03d; }
+.photoSingle, .photoPair { position: absolute; inset: 0; display: grid; }
+.photoPair { grid-template-columns: 1fr 1fr; gap: 2px; }
+.photo { position: relative; min-width: 0; overflow: hidden; }
+.photo img { object-fit: cover; }
+.grid .frame .badge { position: absolute; left: 12px; bottom: 12px; padding: 6px 8px; color: #f1f7fc; background: #030a13c9; border: 1px solid #b8d5e62b; border-radius: 2px; font-size: 8px; letter-spacing: .09em; text-transform: uppercase; pointer-events: none; }
+.page :global(.page-hero-image) { filter: none; }
+.page :global(.page-hero-overlay) { background: linear-gradient(90deg, #02070ee6, #02070e55), linear-gradient(0deg, #02070e99, transparent); }
+.laser :global(.page-hero-image) { object-position: center 65%; }
+.aero :global(.page-hero-image) { object-position: center; }
+.credits { padding: 0 0 40px; color: #a2b6c9; font-size: 11px; line-height: 1.7; }
+.credits a { color: #a7d9f8; text-decoration: underline; text-underline-offset: 3px; }
+.credits p { margin: 8px 0; }
