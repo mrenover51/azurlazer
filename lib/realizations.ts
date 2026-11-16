@@ -1,22 +1,62 @@
-export type Realization = {
-  id: string;
-  title: string;
-  category: "laser" | "aerogommage";
-  support: string;
-  need: string;
-  solution: string;
-  result: string;
-  beforeLabel: string;
-  afterLabel: string;
-  beforeSrc: string;
-  afterSrc: string;
-};
-
-export const realizations: Realization[] = [
-  { id: "metal-oxyde", title: "Pièce métallique rouillée", category: "laser", support: "Métal", need: "Enlever la rouille", solution: "Décapage laser", result: "Métal nettoyé, prêt pour la suite du projet", beforeLabel: "Surface rouillée", afterLabel: "Métal nettoyé", beforeSrc: "/images/laser/rust-metal-surface.webp", afterSrc: "/images/laser/laser-metal-sparks.webp" },
-  { id: "piece-mecanique", title: "Pièce mécanique", category: "laser", support: "Acier", need: "Retirer les dépôts présents", solution: "Décapage laser", result: "Pièce nettoyée avec un travail précis", beforeLabel: "Pièce à nettoyer", afterLabel: "Métal nettoyé", beforeSrc: "/images/laser/industrial-mechanical-gears.webp", afterSrc: "/images/home/laser-industrial-hero.webp" },
-  { id: "meuble-bois", title: "Meuble en bois", category: "aerogommage", support: "Bois", need: "Retirer une ancienne finition", solution: "Aérogommage", result: "Bois remis à nu, prêt à recevoir une nouvelle finition", beforeLabel: "Ancien vernis", afterLabel: "Bois remis à nu", beforeSrc: "/images/aerogommage/furniture-restoration-workshop.webp", afterSrc: "/images/aerogommage/wood-surface-preparation.webp" },
-  { id: "poutre", title: "Poutres anciennes", category: "aerogommage", support: "Bois", need: "Retirer l’ancienne couche en surface", solution: "Aérogommage", result: "Bois apparent, prêt pour la rénovation", beforeLabel: "Bois ancien", afterLabel: "Bois remis à nu", beforeSrc: "/images/aerogommage/wood-brick-surface.webp", afterSrc: "/images/aerogommage/wood-beams-renovation.webp" },
-  { id: "pierre", title: "Mur en pierre", category: "aerogommage", support: "Pierre", need: "Nettoyer les salissures en surface", solution: "Aérogommage", result: "Pierre nettoyée et aspect d’origine mieux visible", beforeLabel: "Pierre encrassée", afterLabel: "Pierre nettoyée", beforeSrc: "/images/realisations/weathered-stone-paint.webp", afterSrc: "/images/aerogommage/stone-wall-surface.webp" },
-  { id: "revetement", title: "Peinture sur métal", category: "laser", support: "Métal", need: "Retirer une ancienne peinture", solution: "Décapage laser", result: "Métal préparé pour une nouvelle finition", beforeLabel: "Ancienne peinture", afterLabel: "Métal préparé", beforeSrc: "/images/laser/painted-rust-metal.webp", afterSrc: "/images/laser/laser-metal-sparks.webp" },
+export const realizations = [
+  {
+    "id": "fond-piece-mecanique",
+    "title": "Fond de pièce mécanique",
+    "aspectRatio": "724 / 1086",
+    "description": "Observez les détails du fond de cette pièce mécanique avant et après le nettoyage.",
+    "beforeLabel": "Fond de pièce mécanique avant nettoyage",
+    "afterLabel": "Fond de pièce mécanique après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-avant-fond-original.jpg",
+    "afterSrc": "/images/laser/azurlaser-apres-fond-original.jpg"
+  },
+  {
+    "id": "cylindre-moteur",
+    "title": "Cylindre moteur",
+    "aspectRatio": "724 / 1086",
+    "description": "Comparez l’aspect du cylindre moteur et de ses surfaces avant et après l’intervention.",
+    "beforeLabel": "Cylindre moteur avant nettoyage",
+    "afterLabel": "Cylindre moteur après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-cylindre-avant-fond-original.jpg",
+    "afterSrc": "/images/laser/azurlaser-cylindre-apres-fond-original.jpg"
+  },
+  {
+    "id": "disque-metallique",
+    "title": "Disque métallique",
+    "aspectRatio": "1 / 1",
+    "description": "Suivez la différence d’aspect sur toute la surface du disque.",
+    "beforeLabel": "Disque métallique avant nettoyage",
+    "afterLabel": "Disque métallique après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-disque-avant-slider.webp",
+    "afterSrc": "/images/laser/azurlaser-disque-apres-slider.webp"
+  },
+  {
+    "id": "helice-metallique",
+    "title": "Hélice métallique",
+    "aspectRatio": "1000 / 1100",
+    "description": "Découvrez l’aspect des pales et du centre de l’hélice avant et après le nettoyage.",
+    "beforeLabel": "Hélice métallique avant nettoyage",
+    "afterLabel": "Hélice métallique après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-helice-avant-slider.webp",
+    "afterSrc": "/images/laser/azurlaser-helice-apres-slider.webp"
+  },
+  {
+    "id": "muret-exterieur",
+    "title": "Muret extérieur",
+    "aspectRatio": "1240 / 930",
+    "description": "Comparez la surface de ce muret extérieur et les détails révélés par le nettoyage.",
+    "beforeLabel": "Muret extérieur avant nettoyage",
+    "afterLabel": "Muret extérieur après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-muret-avant-slider.webp",
+    "afterSrc": "/images/laser/azurlaser-muret-apres-slider.webp"
+  },
+  {
+    "id": "sol-pierre",
+    "title": "Sol en pierre",
+    "aspectRatio": "930 / 1130",
+    "description": "Voyez la différence sur les pierres et leurs joints avant et après l’intervention.",
+    "beforeLabel": "Sol en pierre avant nettoyage",
+    "afterLabel": "Sol en pierre après nettoyage",
+    "beforeSrc": "/images/laser/azurlaser-patio-avant-slider.webp",
+    "afterSrc": "/images/laser/azurlaser-patio-apres-slider.webp"
+  }
 ];

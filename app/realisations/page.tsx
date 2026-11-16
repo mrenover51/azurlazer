@@ -2,6 +2,9 @@ import { GlobalCta } from "@/components/layout/global-cta";
 import { RealizationsGallery } from "@/components/realizations/realizations-gallery";
 import { PageHero } from "@/components/ui/page-hero";
 import { pageMetadata } from "@/lib/metadata";
-
-export const metadata = pageMetadata("Réalisations de décapage", "Découvrez des exemples de résultats recherchés en décapage laser et aérogommage sur le métal, le bois et la pierre.", "/realisations");
-export default function RealisationsPage() { return <><PageHero eyebrow="Avant / Après" title="Nos réalisations" subtitle="Découvrez ce que le décapage peut changer sur une surface." image="/images/laser/industrial-mechanical-gears.webp" /><section className="content-section owned-work"><div className="shell"><div><span>01</span><h2>Réalisations AZUR LASER</h2><p>Les photos des prochains chantiers AZUR LASER seront ajoutées ici avec le besoin, le support, la solution choisie et le résultat obtenu.</p></div><div className="owned-work-mark"><strong>AZUR LASER</strong><small>Photos de chantiers à venir</small></div></div></section><section className="content-section alt-section"><div className="shell"><div className="examples-heading"><span>02</span><h2>Exemples de résultats recherchés</h2></div><p className="demo-disclaimer">Ces images illustrent des supports et des résultats possibles. Elles ne montrent pas un même objet avant et après et ne sont pas présentées comme des chantiers AZUR LASER.</p><RealizationsGallery /></div></section><GlobalCta /></>; }
+export const metadata = pageMetadata("Nos réalisations Avant / Après", "Découvrez six réalisations AZUR LASER sur pièces mécaniques, métal et pierre grâce à nos comparateurs Avant / Après interactifs.", "/realisations");
+export default function RealisationsPage() { return <>
+  <PageHero eyebrow="AZUR LASER · Avant / Après" title="NOS RÉALISATIONS" subtitle="Découvrez les résultats de nos interventions grâce à nos comparateurs Avant / Après. Faites glisser le curseur pour voir la différence." />
+  <section className="content-section comparison-section" aria-label="Galerie des réalisations Avant / Après"><div className="shell"><RealizationsGallery premium /></div></section>
+  <GlobalCta />
+</>; }
